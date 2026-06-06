@@ -1,0 +1,11 @@
+{
+  "portgroups": [
+    {
+      "urn": "urn:portgroup:1",
+      "uri": "/service/portgroups/1",
+      "name": "pg-mgmt",
+      "vlanId": 10,
+      "mtu": 1500
+    }
+  ]
+}

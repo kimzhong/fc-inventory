@@ -1,0 +1,10 @@
+{
+  "dvswitchs": [
+    {
+      "urn": "urn:dvswitch:1",
+      "uri": "/service/dvswitchs/1",
+      "name": "dvs-prod",
+      "mtu": 1500
+    }
+  ]
+}

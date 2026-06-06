@@ -1,0 +1,17 @@
+{
+  "clusters": [
+    {
+      "urn": "urn:cluster:1",
+      "name": "Cluster-Prod",
+      "description": "Production cluster",
+      "tag": "prod",
+      "isEnableHa": true,
+      "isEnableDrs": true,
+      "isMemOvercommit": false,
+      "isAutoAdjustNuma": true,
+      "resStrategy": "balance",
+      "drsSetting": {"drsLevel": 3},
+      "haResSetting": {"cpuReservation": 10, "memoryReservation": 20}
+    }
+  ]
+}

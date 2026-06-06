@@ -1,0 +1,14 @@
+{
+  "datastores": [
+    {
+      "urn": "urn:datastore:1",
+      "name": "ds-prod-01",
+      "storageType": "FUSION_STORAGE",
+      "capacityGB": 51200,
+      "freeSpaceGB": 32768,
+      "status": "normal",
+      "thinProvisionSupport": true,
+      "description": "Production datastore"
+    }
+  ]
+}

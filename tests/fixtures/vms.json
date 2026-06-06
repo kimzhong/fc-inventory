@@ -1,0 +1,30 @@
+{
+  "vms": [
+    {
+      "urn": "urn:vm:1",
+      "uri": "/service/vms/1",
+      "name": "vm-app-01",
+      "status": "running",
+      "uuid": "aabbccdd-0000-0000-0000-000000000001",
+      "locationUrn": "urn:host:1",
+      "hostUrn": "urn:host:1",
+      "clusterUrn": "urn:cluster:1",
+      "description": "Application server",
+      "createTime": "2024-01-15 10:00:00",
+      "toolsVersion": "12.5.0"
+    },
+    {
+      "urn": "urn:vm:2",
+      "uri": "/service/vms/2",
+      "name": "vm-db-01",
+      "status": "stopped",
+      "uuid": "aabbccdd-0000-0000-0000-000000000002",
+      "locationUrn": "urn:host:1",
+      "hostUrn": "urn:host:1",
+      "clusterUrn": "urn:cluster:1",
+      "description": "Database server",
+      "createTime": "2024-02-20 14:30:00",
+      "toolsVersion": "12.5.0"
+    }
+  ]
+}

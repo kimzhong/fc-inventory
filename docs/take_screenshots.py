@@ -2,8 +2,9 @@
 Helper script to take UI screenshots for README documentation.
 Run while the FC Inventory Tool dev server is running on http://localhost:5000
 """
-from playwright.sync_api import sync_playwright
 import os
+
+from playwright.sync_api import sync_playwright
 
 OUT = os.path.join(os.path.dirname(__file__), "images")
 os.makedirs(OUT, exist_ok=True)

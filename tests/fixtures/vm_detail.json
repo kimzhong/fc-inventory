@@ -1,0 +1,64 @@
+{
+  "urn": "urn:vm:1",
+  "uri": "/service/vms/1",
+  "name": "vm-app-01",
+  "status": "running",
+  "uuid": "aabbccdd-0000-0000-0000-000000000001",
+  "locationUrn": "urn:host:1",
+  "hostUrn": "urn:host:1",
+  "clusterUrn": "urn:cluster:1",
+  "description": "Application server",
+  "createTime": "2024-01-15 10:00:00",
+  "toolsVersion": "12.5.0",
+  "osOptions": {"osType": "CentOS 7.6"},
+  "vmConfig": {
+    "cpu": {
+      "quantity": 4,
+      "coresPerSocket": 2,
+      "reservation": 1000,
+      "limit": 0,
+      "weight": 1000,
+      "cpuHotPlug": false,
+      "cpuBindType": "auto",
+      "cpuPolicy": "shared"
+    },
+    "memory": {
+      "quantityMB": 8192,
+      "reservation": 2048,
+      "limit": 0,
+      "weight": 1000,
+      "memHotPlug": false,
+      "hugePage": 0
+    },
+    "nics": [
+      {
+        "name": "nic-0",
+        "mac": "00:50:56:8a:00:01",
+        "ip": "10.1.0.11",
+        "portGroupName": "pg-mgmt",
+        "portGroupUrn": "urn:portgroup:1",
+        "portGroupType": "access",
+        "sequenceNum": 0,
+        "virtIo": true,
+        "nicType": "E1000",
+        "connectAtPowerOn": true,
+        "urn": "urn:nic:1"
+      }
+    ],
+    "disks": [
+      {
+        "volumeUrn": "urn:volume:1",
+        "volumeUuid": "v-uuid-0001",
+        "name": "disk-0",
+        "quantityGB": 100,
+        "pciType": "VIRTIO",
+        "isThin": true,
+        "sequenceNum": 0,
+        "datastoreUrn": "urn:datastore:1",
+        "storageType": "FUSION_STORAGE",
+        "indepDisk": false,
+        "persistentDisk": true
+      }
+    ]
+  }
+}

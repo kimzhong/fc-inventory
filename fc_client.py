@@ -5,6 +5,7 @@ Handles authentication and all inventory data retrieval.
 
 import hashlib
 import logging
+
 import requests
 import urllib3
 

@@ -1,0 +1,54 @@
+name: CI
+
+# Lint + type-check + test on every push to a feature branch and on
+# every PR targeting main. Uses `uv` for fast dep installation.
+
+on:
+  push:
+    branches: [feat/**, fix/**]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (py${{ matrix.python-version }})
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev --python ${{ matrix.python-version }}
+
+      - name: Lint (ruff)
+        run: uv run --python ${{ matrix.python-version }} ruff check .
+
+      - name: Type-check (mypy)
+        run: uv run --python ${{ matrix.python-version }} mypy app
+
+      - name: Test
+        run: uv run --python ${{ matrix.python-version }} pytest --cov=app --cov-report=term-missing --cov-fail-under=70
+
+  lint-only:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+        with: { enable-cache: true }
+      - run: uv sync --all-extras --dev
+      - run: uv run ruff check .

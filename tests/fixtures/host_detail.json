@@ -1,0 +1,17 @@
+{
+  "urn": "urn:host:1",
+  "uri": "/service/hosts/1",
+  "name": "host-01.example.com",
+  "ip": "10.0.0.11",
+  "status": "running",
+  "cpuModel": "Intel Xeon Gold 6248R",
+  "cpuQuantity": 48,
+  "cpuMHz": 3000,
+  "memoryQuantityMB": 262144,
+  "memoryUsedMB": 131072,
+  "runningVmCount": 1,
+  "clusterUrn": "urn:cluster:1",
+  "bmcIp": "10.0.0.10",
+  "isMaintaining": false,
+  "hypervisor": "KVM"
+}

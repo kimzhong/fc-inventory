@@ -1,0 +1,11 @@
+# fc-inventory v3.0.0 — dev-only dependencies.
+# Install with: pip install -e ".[dev]"   or   uv sync --extra dev
+-r requirements.txt
+pytest>=8.3
+pytest-asyncio>=0.24
+pytest-cov>=6.0
+ruff>=0.7
+mypy>=1.13
+respx>=0.21
+freezegun>=1.5
+types-openpyxl

@@ -4,9 +4,8 @@ Generates a multi-sheet Excel workbook from collected inventory data.
 """
 
 from openpyxl import Workbook
-from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
-
 
 # Header style constants
 HEADER_FONT = Font(bold=True, color="FFFFFF", size=11)

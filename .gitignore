@@ -1,8 +1,74 @@
+# ── Python ──────────────────────────────────────────────────
 __pycache__/
-*.pyc
-dist/
+*.py[cod]
+*$py.class
+*.so
+.Python
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+*.egg
+.installed.cfg
+MANIFEST
+
+# ── Virtualenvs ─────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.ENV/
+
+# ── Tests / coverage ───────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.cache
+coverage.xml
+*.cover
+
+# ── Type / lint caches ──────────────────────────────────────
+.mypy_cache/
+.ruff_cache/
+.tox/
+.dmypy.json
+dmypy.json
+
+# ── IDE / editor ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Build / packaging ──────────────────────────────────────
 *.spec
+*.pyc
+*.pyo
+
+# ── App artefacts (v3.0.0) ─────────────────────────────────
+out/
 *.xlsx
 *.log
+.env
+.env.local
+.env.*.local
+
+# ── Local config overrides (do not commit secrets) ──────────
+fc-inventory.local.yaml
+config.local.yaml
+*.local.yaml
+
+# ── Agent / dev tooling ─────────────────────────────────────
 .claude/

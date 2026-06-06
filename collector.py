@@ -11,6 +11,7 @@ Uses a "hybrid field mapping" approach:
 import logging
 import re
 from collections import OrderedDict
+
 from fc_client import FCClient
 
 logger = logging.getLogger(__name__)

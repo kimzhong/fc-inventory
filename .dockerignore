@@ -1,0 +1,51 @@
+# .dockerignore for fc-inventory
+.git/
+.github/
+.gitignore
+.dockerignore
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Tests (we only need the app at runtime; tests run in CI).
+tests/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# Build artefacts.
+build/
+dist/
+*.egg-info/
+*.spec
+
+# Local config / secrets.
+.env
+.env.local
+*.local.yaml
+
+# Local output and logs.
+out/
+*.xlsx
+*.log
+
+# IDE / editor.
+.vscode/
+.idea/
+.DS_Store
+
+# Docs (not needed at runtime; the /changelog page reads CHANGELOG.md
+# from the source tree at build time, so we keep it).
+# docs/        # kept
+# README.md   # kept (installed as package metadata)
+
+# Mock server fixtures used only by tests.
+testdata/
